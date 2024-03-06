@@ -31,10 +31,10 @@ export default function Home() {
       <Clock targetDate="2024-03-23T09:00:00" />
       {/* buttons */}
       <div className="relative bottom-10 flex flex-row gap-x-20">
-        <button className="iceland flex align-middle text-3xl md:w-48 w-12 py-2 bg-white rounded-lg text-black justify-center border-solid border-2">
+        <button className="iceland flex align-middle hover:scale-105 hover:bg-opacity-35 hover:text-white transition ease-in-out duration-200 text-3xl md:w-48 w-12 py-2 bg-white rounded-lg text-black justify-center border-solid border-2">
           <a href={gglFormLink}>APPLY</a>
         </button>
-        <button className="iceland flex align-middle text-3xl md:w-48 w-12 py-2 bg-white bg-opacity-15 rounded-lg text-white justify-center border-solid border-2">
+        <button className="iceland flex align-middle hover:scale-105 hover:bg-opacity-100 hover:text-black transition ease-in-out duration-200 text-3xl md:w-48 w-12 py-2 bg-white bg-opacity-15 rounded-lg text-white justify-center border-solid border-2">
           Learn More
         </button>
       </div>
