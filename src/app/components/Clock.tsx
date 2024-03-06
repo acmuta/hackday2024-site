@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 
+//@ts-ignore
 export default function Clock({ targetDate }) {
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
