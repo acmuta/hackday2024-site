@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Iceland, Roboto } from "next/font/google";
 import "./globals.css";
+import SessionWrapper from "@/utils/SessionWrapper";
 
 const iceland = Iceland({
   weight: "400",
@@ -26,10 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${iceland.variable} ${roboto.variable}`}>
-        {children}
-      </body>
-    </html>
+    <SessionWrapper>
+      <html lang="en">
+        <body className={`${iceland.variable} ${roboto.variable}`}>
+          {children}
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }

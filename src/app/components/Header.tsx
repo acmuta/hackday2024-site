@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 export default function Header() {
   const gglFormLink = process.env.GOOGLE_LINK;
+  const { data: session, status } = useSession();
+
   return (
     <div className="flex sticky top-2 flex-row md:gap-x-56 gap-x-10 max-h-16 mt-1 max-w-full content-center items-center inset-y-0">
       <div className="flex flex-row gap-3 ">
@@ -30,7 +33,12 @@ export default function Header() {
       </div>
       <div className="iceland">
         <button className="flex align-middle text-2xl pl-8 pr-8 bg-white rounded-md text-black justify-center border-solid border-2">
-          Sign in
+          {session ? (
+            //@ts-ignore
+            <a href="/api/auth/signout">Sign out</a>
+          ) : (
+            <a href="/api/auth/signin">Sign in</a>
+          )}
         </button>
         <div className="absolute"></div>
       </div>
