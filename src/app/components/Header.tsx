@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 export default function Header() {
+  const gglFormLink = process.env.GOOGLE_LINK;
   return (
     <div className="flex sticky top-2 flex-row md:gap-x-56 gap-x-10 max-h-16 mt-1 max-w-full content-center items-center inset-y-0">
       <div className="flex flex-row gap-3 ">
@@ -13,7 +14,7 @@ export default function Header() {
       <div className="flex flex-row md:gap-20 iceland">
         <div>
           <button className="flex align-middle text-2xl pl-12 pr-12 bg-white bg-opacity-20 rounded-md text-white justify-center border-solid border-2">
-            Apply
+            <a href={gglFormLink}>Apply</a>
           </button>
         </div>
         <div>

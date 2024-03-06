@@ -40,7 +40,7 @@ export default function Clock({ targetDate }) {
         minutes: minutes.toString().padStart(2, "0"),
         seconds: seconds.toString().padStart(2, "0"),
       });
-    }, 1000);
+    }, 500);
 
     // Clear interval on component unmount
     return () => clearInterval(interval);
