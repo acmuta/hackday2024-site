@@ -1,7 +1,7 @@
-import CountdownTimer from './Timer'
-import { iceland } from './ui/fonts'
-import { PulseBeams } from './ui/pulse-beams'
-import Link from 'next/link'
+import CountdownTimer from "./Timer";
+import { iceland } from "./ui/fonts";
+import { PulseBeams } from "./ui/pulse-beams";
+import Link from "next/link";
 
 export default function Homepage() {
   return (
@@ -26,13 +26,13 @@ export default function Homepage() {
           <div className="flex flex-row items-center justify-center space-x-10">
             <Link
               href="/form"
-              className="cursor-pointer rounded-md p-5 hover:bg-transparent hover:text-white text-black bg-white md:w-[270px] w-[120px] rounded-3xs shadow-[0px_4px_5.5px_rgba(0,_0,_0,_0.25),_0px_4px_4px_rgba(0,_0,_0,_0.25)] box-border overflow-hidden shrink-0 flex flex-row items-center justify-center border-[1px] border-solid border-white hover:bg-gainsboro-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100"
+              className="cursor-pointer rounded-md p-5 hover:scale-105 hover:bg-opacity-35 hover:text-white transition ease-in-out duration-200 text-black bg-white md:w-[270px] w-[120px] rounded-3xs shadow-[0px_4px_5.5px_rgba(0,_0,_0,_0.25),_0px_4px_4px_rgba(0,_0,_0,_0.25)] box-border overflow-hidden shrink-0 flex flex-row items-center justify-center border-[1px] border-solid border-white hover:bg-gainsboro-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100"
             >
               <div className="relative text-29xl leading-[38px] font-iceland ">
                 APPLY
               </div>
             </Link>
-            <button className="cursor-pointer rounded-md p-5 hover:bg-white hover:text-black text-white  bg-aliceblue md:w-[270px] w-[120px] rounded-3xs box-border overflow-hidden shrink-0 flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100">
+            <button className="cursor-pointer rounded-md p-5 hover:bg-white hover:text-black hover:scale-105 hover:bg-opacity-100  transition ease-in-out duration-200 text-white  bg-aliceblue md:w-[270px] w-[120px] rounded-3xs box-border overflow-hidden shrink-0 flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100">
               <div className="relative text-29xl leading-[38px] font-icelandtext-left">
                 Learn More
               </div>
@@ -41,5 +41,5 @@ export default function Homepage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
