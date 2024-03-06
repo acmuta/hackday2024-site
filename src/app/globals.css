@@ -8,6 +8,22 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.iceland {
+  font-family: var(--font-iceland);
+}
+
+.roboto {
+  font-family: var(--font-roboto);
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #ccc,
+    0 0 40px #ccc
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -18,12 +34,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #191420;
 }
 
 @layer utilities {
