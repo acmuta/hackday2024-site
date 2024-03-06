@@ -51,25 +51,25 @@ export default function Clock({ targetDate }) {
       <h1 className="relative md:bottom-14 iceland gap-x-32 flex flex-row md:text-[160px] sm:text-[80px] text-[40px]">
         <div className="flex flex-col items-center">
           <h1 className="neonText">{timeLeft.days}</h1>
-          <h1 className="md:text-[50px] text-[30px]  relative md:bottom-14">
+          <h1 className="md:text-[50px] text-[30px] text-white relative md:bottom-14">
             Days
           </h1>
         </div>
         <div className="flex flex-col items-center ">
           <h1 className="neonText">{timeLeft.hours}</h1>
-          <h1 className="md:text-[50px] text-[30px]  relative md:bottom-14">
+          <h1 className="md:text-[50px] text-[30px] text-white relative md:bottom-14">
             Hours
           </h1>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="neonText">{timeLeft.minutes}</h1>
-          <h1 className="md:text-[50px] text-[30px]  relative md:bottom-14">
+          <h1 className="md:text-[50px] text-[30px] text-white  relative md:bottom-14">
             Minutes
           </h1>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="neonText">{timeLeft.seconds}</h1>
-          <h1 className="md:text-[50px] text-[30px]  relative md:bottom-14">
+          <h1 className="md:text-[50px] text-[30px] text-white relative md:bottom-14">
             Seconds
           </h1>
         </div>

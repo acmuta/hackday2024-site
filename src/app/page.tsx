@@ -20,10 +20,10 @@ export default function Home() {
       <Header />
       {/* Titles */}
       <div className="flex flex-col gap-y-3 mt-20 items-center">
-        <h1 className="relative md:top-14 roboto text-4xl">
+        <h1 className="relative text-white md:top-14 roboto text-4xl">
           HACKUTA X FOUNDERS ARENA
         </h1>
-        <h1 className="iceland tracking-widest md:text-[180px] sm:text-[100px] text-[50px]">
+        <h1 className="iceland text-white tracking-widest md:text-[180px] sm:text-[100px] text-[50px]">
           HACKDAY
         </h1>
       </div>
