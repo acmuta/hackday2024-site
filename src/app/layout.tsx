@@ -1,8 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Iceland, Roboto } from "next/font/google";
 import "./globals.css";
+import SessionWrapper from "@/utils/SessionWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
+const iceland = Iceland({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-iceland",
+  display: "swap",
+});
+const roboto = Roboto({
+  weight: ["300", "400"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <SessionWrapper>
+      <html lang="en">
+        <body className={`${iceland.variable} ${roboto.variable}`}>
+          {children}
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }
