@@ -17,6 +17,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      dropShadow: {
+        'eclipse': '-40px 30px 2px rgba(0, 0, 0, 0.2)',
+      },
     },
   },
   plugins: [addVariablesForColors],

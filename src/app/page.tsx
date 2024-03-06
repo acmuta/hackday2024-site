@@ -12,14 +12,14 @@ export default function Home() {
     <main className="">
       <div className="h-full">
         <Navbar></Navbar>
-        <TracingBeam className="max-w-4xl md:max-w-7xl">
+        <TracingBeam className="max-w-4xl md:max-w-7xl pb-24">
           <Homepage></Homepage>
           {/* <FAQ></FAQ> */}
-          <Venue></Venue>
+          {/* <Venue></Venue> */}
         </TracingBeam>
 
         {/* <Team></Team> */}
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </div>
     </main>
   )

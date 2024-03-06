@@ -3,7 +3,7 @@ import { iceland } from './ui/fonts'
 
 export default function Venue() {
   return (
-    <section className="bg-transparent flex flex-col items-center justify-start pt-0 px-5 pb-[266px] box-border gap-[35px_0px] max-w-full text-center text-57xl text-white">
+    <section className="bg-transparent flex flex-col items-center justify-start pt-0 px-5 box-border gap-[35px_0px] max-w-full text-center text-57xl text-white">
       <div
         className={`${iceland.className} flex flex-row items-start md:text-6xl text-4xl justify-center py-0 px-5`}
       >

@@ -9,7 +9,7 @@ export default function Homepage() {
       <div className="flex flex-col items-center max-w-full space-y-40">
         <div className="flex flex-col items-center space-y-28">
           <div className="flex flex-col items-center justify-center space-y-4">
-            <div className="relative md:text-4xl text-xl">
+            <div className="relative md:text-4xl text-xl font-bold text-white drop-shadow-eclipse">
               HACKUTA X FOUNDERS ARENA
             </div>
             <div
