@@ -9,15 +9,16 @@ export default function Navbar() {
         <div className=" flex items-start max-w-full justify-between md:space-x-80 md:space-y-0 space-y-4 md:flex-row flex-col">
           <Link
             href="/"
-            className="flex items-center justify-start py-0 space-x-3 z-0"
+            className="flex items-center justify-start py-0 space-x-3 "
           >
             <Image
+              className="z-20"
               src={"/hackutalogo-1@2x.png"}
               width={40}
               height={40}
               alt="logo"
             />
-            <div className="flex flex-col justify-center leading-[19px] ">
+            <div className="flex flex-col justify-center leading-[19px] z ">
               <p className={`m-0 ${iceland.className}`}>HACKDAY</p>
               <p className={`m-0 ${iceland.className}`}>2024</p>
             </div>
