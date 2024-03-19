@@ -1,8 +1,19 @@
+"use client";
 import Image from "next/image";
 import { iceland } from "./ui/fonts";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
+import router from "next/router";
 
 export default function Navbar() {
+  const { data: session } = useSession();
+
+  const handleSignIn = () => {
+    signIn();
+  };
+  const handleSignOut = () => {
+    signOut({ callbackUrl: "/", redirect: true });
+  };
   return (
     <div>
       <div className="flex flex-row items-start justify-center max-w-full text-left text-xl text-white font-iceland p-5 m-0">
@@ -47,13 +58,22 @@ export default function Navbar() {
                 SCHEDULE
               </div>
             </button>
-            {/* <button className="cursor-pointer rounded-md w-[170px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
+            <button className="cursor-pointer rounded-md w-[170px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
-                SIGN IN
+                {session ? (
+                  <div onClick={handleSignOut}>SIGN OUT</div>
+                ) : (
+                  <a
+                    href="/api/auth/signin"
+                    className={`${iceland.className}  text-white`}
+                  >
+                    SIGN IN
+                  </a>
+                )}
               </div>
             </button>
-            <button className="cursor-pointer rounded-md w-[170px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
+            {/* <button className="cursor-pointer rounded-md w-[170px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
                 HACKDAY

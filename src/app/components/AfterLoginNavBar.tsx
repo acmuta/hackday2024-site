@@ -1,7 +1,15 @@
+"use client";
 import Image from "next/image";
 import { iceland } from "./ui/fonts";
 import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
+
 export default function TeamNavBar() {
+  const { data: session } = useSession();
+  const handleSignOut = () => {
+    signOut({ callbackUrl: "/", redirect: true });
+  };
+
   return (
     <div className="flex max-w-ful p-5 items-center  justify-center md:space-x-80 md:space-y-0 space-y-4 md:flex-row flex-col ">
       <Link href="/" className="flex flex-row gap-x-3 justify-center mr-3">
@@ -38,6 +46,24 @@ export default function TeamNavBar() {
             <p className={`${iceland.className}  text-white`}>JUDGE</p>
           </div>
         </Link>
+        <div className="flex justify-center items-center border-solid border-2 border-white cursor-pointer rounded-md w-[170px]   hover:scale-105 transition ease-in-out duration-100 text-xl  ">
+          {session ? (
+            //@ts-ignore
+            <div
+              className={`${iceland.className}  text-white`}
+              onClick={handleSignOut}
+            >
+              SIGN OUT
+            </div>
+          ) : (
+            <a
+              href="/api/auth/signin"
+              className={`${iceland.className}  text-white`}
+            >
+              SIGN IN
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
