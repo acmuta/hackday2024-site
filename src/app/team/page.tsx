@@ -1,4 +1,4 @@
-import TeamNavBar from "../components/TeamNavBar";
+import TeamNavBar from "../components/AfterLoginNavBar";
 import Team from "../components/Team";
 import Link from "next/link";
 import { iceland } from "../components/ui/fonts";
@@ -130,7 +130,8 @@ export default function TeamPage() {
   return (
     <div>
       <TeamNavBar></TeamNavBar>
-      <div className="flex flex-row flex-wrap max-w-full overflow-y-auto justify-start items-center gap-x-10 gap-y-10 md:px-44 px-20 md:pt-10 md:max-h-[720px]">
+
+      <div className="flex flex-row flex-wrap max-w-full overflow-y-auto justify-start items-center gap-x-10 gap-y-10 md:px-44 px-20 md:pt-10 md:max-h-[720px] max-h-[400px]">
         {teamList.map((team, index) => (
           <Team team={team} key={index}></Team>
         ))}
@@ -138,7 +139,7 @@ export default function TeamPage() {
       <div
         className={`${iceland.className} w-full md:text-4xl text-2xl flex flex-row items-center justify-center mt-10`}
       >
-        <button className="cursor-pointer rounded-md p-5 hover:bg-white hover:text-black hover:scale-105 hover:bg-opacity-100  transition ease-in-out duration-200 text-white  bg-aliceblue md:w-[270px] w-[120px] rounded-3xs box-border overflow-hidden shrink-0 flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100">
+        <button className="cursor-pointer rounded-md p-5 hover:scale-105 hover:bg-opacity-35 hover:text-white transition ease-in-out duration-200 text-3xl md:w-56 w-24 py-2 bg-white  text-black justify-center border-solid border-2s">
           <div className="relative text-29xl leading-[38px] font-icelandtext-left">
             Add Team
           </div>
