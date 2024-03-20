@@ -24,7 +24,7 @@ export default function TeamNavBar() {
           <h1 className={`${iceland.className} text-white text-xl`}>2024</h1>
         </div>
       </Link>
-      <div className="flex md:flex-row flex-col   md:gap-10 gap-5 justify-center  ">
+      <div className="flex md:flex-row flex-col   md:gap-5 gap-5 justify-center  ">
         <Link href="/" className="">
           <div className="flex justify-center items-center border-solid border-2 border-white cursor-pointer rounded-md w-[170px]   hover:scale-105 transition ease-in-out duration-100 text-xl  ">
             <p className={`${iceland.className}  text-white`}>CHALLENGES</p>

@@ -61,8 +61,7 @@ export const nextauthOptions: NextAuthOptions = {
     }),
     DiscordProvider({
         profile(profile) {
-          // console.log('Profile GH: ', profile)
-  
+
           let userRole = 'user'
           return {
             ...profile,
@@ -100,16 +99,12 @@ callbacks: {
         }
         return '/team'
     },
-    async jwt({ token, profile }) {
-        if(profile){    
-        // const user = await getUserByEmail({email: profile.email});
-        }
-        return token
-      },
+   
  
     async session({ session, token }) {
-        //@ts-ignore
-        const userInfo = await getUserByEmail({email: session.user?.email});
+      if (session.user?.email) {
+       
+          const userInfo = await getUserByEmail({email: session.user?.email});
         return {
             ...session,
             user: {
@@ -119,9 +114,11 @@ callbacks: {
               role: userInfo.role,
               provider: userInfo.provider,
             image: userInfo.image,
+            team: userInfo.team
             }
           }
-        // console.log("IM CALLING")
-        // return session
+        }
+        return session;
+      
 }
 }}

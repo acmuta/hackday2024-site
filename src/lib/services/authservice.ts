@@ -49,13 +49,14 @@ export async function signInWithProvider({account, profile}: SignInWithProviderP
         image: profileImage,
         role: 'user',
         provider: account.provider
+
     });
     await newUser.save();
     return true
 }
 
 interface GetUserByEmailParams {
-    email: string | undefined;
+    email: string ;
   }
   
   export async function getUserByEmail({
@@ -69,7 +70,7 @@ interface GetUserByEmailParams {
       throw new Error ("User does not exist!")
     }
   
-    console.log("NHIII2")
+
     return {...user._doc, _id: user._id.toString()}
   }
 
