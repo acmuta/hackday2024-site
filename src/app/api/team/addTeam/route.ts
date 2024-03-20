@@ -9,24 +9,34 @@ export async function POST(request: Request){
     await connectDB();
     const body = await request.json();
     const {name, user} = body;
-    user.team = name
-    const getTeam = await Team.findOne({name: name});
-    if (getTeam) {
+    const userfromDb = await UserProfile.findOne({email: user.email});
+    user.team = userfromDb.team
+    console.log(name, user)
+    if (user.team === "None"){
+        user.team = name
+        const getTeam = await Team.findOne({name: name});
+        if (getTeam) {
 
-        return new NextResponse("Team already exists", {status: 400})
+            return new NextResponse("Team already exists", {status: 400})
+        }
+        await UserProfile.updateOne({email: user.email}, {team: name})
+        
+        const team = await Team.create({
+            name: name,
+            members: [user],
+
+        });
+
+        await team.save();
+
+
+        return new NextResponse("Team added successfully", {status: 201})
     }
-    await UserProfile.updateOne({email: user.email}, {team: name})
+    else{
+        return new NextResponse("User already in a team", {status: 400})
     
-    const team = await Team.create({
-        name: name,
-        members: [user],
-
-    });
-
-   await team.save();
-
-
-     return new NextResponse("Team added successfully", {status: 201})
+    }
+    
 
 }
 catch (error) {

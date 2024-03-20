@@ -149,6 +149,7 @@ export default function TeamPage() {
   };
   const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (session) {
       const user: UserInterface = {
         name: session.user?.name,
@@ -179,11 +180,15 @@ export default function TeamPage() {
           setTeamName("");
           setAddingTeam(true);
           window.location.reload();
-          // setTeamList([...teamList, team]));
         } else {
           console.log("failed to add team");
-
-          alert("Team already exists, please try another name");
+          if (res.status === 400) {
+            alert("You're already in a team");
+          } else if (res.status === 500) {
+            alert("Team already exists, please try another name");
+          } else {
+            alert("Failed to add team");
+          }
 
           setTeamName("");
         }
@@ -191,6 +196,9 @@ export default function TeamPage() {
         console.log("error", error);
       }
     }
+  };
+  const handleGoBack = () => {
+    setAddingTeam(true);
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -241,41 +249,65 @@ export default function TeamPage() {
           </div>
         </div>
       ) : (
-        <div className="">
-          <form onSubmit={handleOnSubmit} className=" ">
-            <div className="md:h-[720px] h-[400px] flex flex-row justify-center items-center">
-              <label
-                htmlFor="teamName"
-                className={`${iceland.className}  text-white md:text-6xl  text-3xl`}
-              >
-                Team Name
-              </label>
-              <input
-                type="text"
-                id="teamNameInput"
-                name="teamName"
-                value={teamName}
-                onChange={handleInputChange}
-                className={`md:w-96 w-48 md:h-14 h-10 rounded-md p-5 bg-white text-black border-solid border-2s border-white bg-opacity-30  md:text-2xl text-md md:ml-5 ml-1 ${iceland.className}  text-white md:text-3xl  text-md`}
-                placeholder="Enter your team name"
-                required
-              />
-            </div>
-
-            <div
-              className={`${iceland.className} w-full md:text-4xl text-xl flex flex-row items-center justify-center mt-10 absolute bottom-10`}
+        <>
+          <div className="fixed top-0 left-0 m-4">
+            <button
+              className="bg-white text-black p-2 rounded-full hover:bg-gray-200"
+              onClick={handleGoBack}
             >
-              <button
-                className="cursor-pointer rounded-md p-5 hover:scale-105 hover:bg-opacity-35 hover:text-white transition ease-in-out duration-200 text-3xl md:w-56  w-40 py-2 bg-white  text-black justify-center border-solid border-2s"
-                type="submit"
+              {/* Replace this with your desired icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <div className="relative text-29xl leading-[38px] font-icelandtext-left">
-                  Add Team
-                </div>
-              </button>
-            </div>
-          </form>
-        </div>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="">
+            <form onSubmit={handleOnSubmit} className=" ">
+              <div className="md:h-[720px] h-[400px] flex flex-row justify-center items-center">
+                <label
+                  htmlFor="teamName"
+                  className={`${iceland.className}  text-white md:text-6xl  text-3xl`}
+                >
+                  Team Name
+                </label>
+                <input
+                  type="text"
+                  id="teamNameInput"
+                  name="teamName"
+                  value={teamName}
+                  onChange={handleInputChange}
+                  className={`md:w-96 w-48 md:h-14 h-10 rounded-md p-5 bg-white text-black border-solid border-2s border-white bg-opacity-30  md:text-2xl text-md md:ml-5 ml-1 ${iceland.className}  text-white md:text-3xl  text-md`}
+                  placeholder="Enter your team name"
+                  required
+                />
+              </div>
+
+              <div
+                className={`${iceland.className} w-full md:text-4xl text-xl flex flex-row items-center justify-center mt-10 absolute bottom-10`}
+              >
+                <button
+                  className="cursor-pointer rounded-md p-5 hover:scale-105 hover:bg-opacity-35 hover:text-white transition ease-in-out duration-200 text-3xl md:w-56  w-40 py-2 bg-white  text-black justify-center border-solid border-2s"
+                  type="submit"
+                >
+                  <div className="relative text-29xl leading-[38px] font-icelandtext-left">
+                    Add Team
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </>
       )}
     </div>
   );
