@@ -6,6 +6,7 @@ import Spinner from "../components/Spinner";
 import { useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import UserInterface from "@/lib/utils/interfaces/userInterface";
+import { redirect } from "next/navigation";
 
 // const teamList = [
 //   {
@@ -140,6 +141,9 @@ export default function TeamPage() {
   const [addingTeam, setAddingTeam] = useState(true);
   const [loading, setLoading] = useState(true);
 
+  if (!session) {
+    redirect("/");
+  }
   const handleOnClickAddTeam = () => {
     setAddingTeam(false);
   };

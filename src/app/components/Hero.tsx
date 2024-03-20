@@ -32,11 +32,20 @@ export default function Homepage() {
                 APPLY
               </div>
             </Link>
+
             <button className="cursor-pointer rounded-md p-5 hover:bg-white hover:text-black hover:scale-105 hover:bg-opacity-100  transition ease-in-out duration-200 text-white  bg-aliceblue md:w-[270px] w-[120px] rounded-3xs box-border overflow-hidden shrink-0 flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100">
               <div className="relative text-29xl leading-[38px] font-icelandtext-left">
                 Learn More
               </div>
             </button>
+          </div>
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://discord.com/invite/4e64SfjmWS"
+              className="px-4 py-2 rounded-md  hover:bg-white hover:text-black hover:scale-105 hover:bg-opacity-100  transition ease-in-out duration-200 text-white flex items-center space-x-2 box-border overflow-hidden border-[1px] border-solid border-white"
+            >
+              <span>Join Discord</span>
+            </a>
           </div>
         </div>
       </div>
