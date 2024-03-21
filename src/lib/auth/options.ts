@@ -92,7 +92,7 @@ callbacks: {
 
             return await signInWithProvider({ account, profile });
         }
-        console.log("hello")
+
         return true;
     },
     
@@ -108,7 +108,6 @@ callbacks: {
           token._id = user._id
           token.role = user.role
           token.provider = user.provider
-
 
         }
       }

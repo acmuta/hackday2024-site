@@ -139,12 +139,17 @@ export default function Navbar() {
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
                 {session ? (
-                  <a
-                    href="/api/auth/signout"
-                    className={`${iceland.className}  text-white`}
-                  >
-                    SIGN OUT
-                  </a>
+                  // <a
+                  //   href="/api/auth/signout"
+                  //   className={`${iceland.className}  text-white`}
+                  // >
+                  //   SIGN OUT
+                  // </a>
+                  <div onClick={handleSignOut}>
+                    <p className={`${iceland.className}  text-white`}>
+                      SIGN OUT
+                    </p>
+                  </div>
                 ) : (
                   <a
                     href="/api/auth/signin"
