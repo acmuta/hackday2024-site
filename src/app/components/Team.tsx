@@ -89,6 +89,7 @@ export default function Team({ team }: Team) {
             return (
               <div className="flex flex-row gap-x-5  " key={index}>
                 <img
+                //@ts-ignore
                   src={member.image}
                   alt="image"
                   className="w-10 h-10 rounded-full object-cover"
