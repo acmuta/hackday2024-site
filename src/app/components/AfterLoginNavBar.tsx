@@ -119,18 +119,22 @@ export default function Navbar() {
                 LEADERBOARD
               </div>
             </button>
-            <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
-              <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
-              <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
-                TEAMS
+            <Link href="/team">
+              <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
+                <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
+                <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
+                  TEAMS
+                </div>
+              </button>
+            </Link>
+            <Link href="/judge">
+              <div className="cursor-pointer rounded-md w-[150px] hover:bg-zinc-400 pt-[7px] pb-[7px] pr-11 pl-14 bg-aliceblue rounded-8xs flex flex-row items-center justify-center border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
+                <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white " />
+                <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]  ">
+                  JUDGE
+                </div>
               </div>
-            </button>
-            <div className="cursor-pointer rounded-md w-[150px] hover:bg-zinc-400 pt-[7px] pb-[7px] pr-11 pl-14 bg-aliceblue rounded-8xs flex flex-row items-center justify-center border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
-              <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white " />
-              <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]  ">
-                JUDGE
-              </div>
-            </div>
+            </Link>
             <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">

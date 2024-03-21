@@ -5,8 +5,6 @@ import { iceland } from "./ui/fonts";
 import UserInterface from "@/lib/utils/interfaces/userInterface";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { set } from "mongoose";
-import { get } from "http";
 
 type Member = UserInterface;
 interface TeamProps {

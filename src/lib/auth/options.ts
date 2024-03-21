@@ -93,12 +93,12 @@ callbacks: {
         }
         return true;
     },
-    async redirect({url, baseUrl}) {
-        if (url==="/"){
-            return `${baseUrl}/`
-        }
-        return '/team'
-    },
+    // async redirect({url, baseUrl}) {
+    //     if (url==="/"){
+    //         return `${baseUrl}/`
+    //     }
+    //     return '/team'
+    // },
    
  
     async session({ session, token }) {

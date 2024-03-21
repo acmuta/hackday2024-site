@@ -141,9 +141,6 @@ export default function TeamPage() {
   const [addingTeam, setAddingTeam] = useState(true);
   const [loading, setLoading] = useState(true);
 
-  if (!session) {
-    redirect("/");
-  }
   const handleOnClickAddTeam = () => {
     setAddingTeam(false);
   };
