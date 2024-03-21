@@ -87,11 +87,8 @@ export default function Team({ team }: Team) {
             return (
               <div className="flex flex-row gap-x-5  " key={index}>
                 <img
-                  src={
-                    member.image
-                      ? member.image
-                      : "https://static.vecteezy.com/system/resources/previews/005/544/718/non_2x/profile-icon-design-free-vector.jpg"
-                  }
+                  //@ts-ignore
+                  src={member.image}
                   alt="image"
                   className="w-10 h-10 rounded-full object-cover"
                 />
