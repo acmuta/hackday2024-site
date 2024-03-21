@@ -40,4 +40,30 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .customScroll::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+
+  }
+
+  /* Track */
+  .customScroll::-webkit-scrollbar-track {
+    background: #cecece00;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  .customScroll::-webkit-scrollbar-thumb {
+    background: #888;
+
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  .customScroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+    border-radius: 5px;
+  }
 }
