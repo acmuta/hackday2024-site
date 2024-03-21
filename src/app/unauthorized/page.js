@@ -5,7 +5,6 @@ export default function UnauthorizedPage() {
         <div>
             <NavBar />
             <div className="md:h-[720px] h-[400px] flex flex-row justify-center items-center">
-
                 <p className={`${iceland.className} text-white text-3xl `}>You are not authorized to view this page.</p>
 
             </div>

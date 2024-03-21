@@ -20,7 +20,7 @@ export default function Home() {
             <FAQ></FAQ>
           </div>
 
-          {/* <Venue></Venue> */}
+          <Venue></Venue>
         </TracingBeam>
 
         {/* <Footer></Footer> */}
