@@ -23,6 +23,16 @@ interface ITeam extends Document {
 
 }
 
+// interface ISubmission extends Document {
+//   category: string;
+//   teamName: string;
+//   url:string;
+//   score:number;
+//   reviewCount: number;
+// }
+
+  
+
 const teamSchema = new Schema<ITeam>({
   name:{
     type: String,
