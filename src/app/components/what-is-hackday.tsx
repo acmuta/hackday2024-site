@@ -1,6 +1,6 @@
-'use client'
+"use client";
 import { iceland } from "./ui/fonts";
-
+import React, { forwardRef } from "react";
 const FAQ_Question = ({ data }: { data: any }) => {
   return (
     <>
@@ -98,7 +98,8 @@ export default function FAQ() {
             className={` max-[640px]:text-[18px] text-[36px] h-[432px] relative text-17xl leading-[48px] whitespace-pre-wrap inline-block max-w-full font-regular-14 mq1050:text-10xl mq1050:leading-[38px] mq450:text-3xl mq450:leading-[29px]`}
           >
             <span>
-            In addition to the opportunity to submit a project for judging, we offer free food and fun events.
+              In addition to the opportunity to submit a project for judging, we
+              offer free food and fun events.
             </span>
             {/* <span className="font-extralight">{` `}</span>
             <span>{`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus `}</span>
@@ -120,7 +121,7 @@ export default function FAQ() {
             {hackDayData.map((data, index) => {
               return (
                 <>
-                  <FAQ_Question data={data} />
+                  <FAQ_Question data={data} key={index} />
                 </>
               );
             })}

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Navbar from "./components/NavBar";
 import Homepage from "./components/Hero";
@@ -15,8 +16,11 @@ export default function Home() {
 
         <TracingBeam className="max-w-4xl md:max-w-7xl pb-24">
           <Homepage></Homepage>
-          {/* <FAQ></FAQ> */}
-          {/* <Venue></Venue> */}
+          <div id="faqSection">
+            <FAQ></FAQ>
+          </div>
+
+          <Venue></Venue>
         </TracingBeam>
 
         {/* <Footer></Footer> */}
