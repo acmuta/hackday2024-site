@@ -21,15 +21,16 @@ import { isGeneratorFunction } from 'util/types'
 
 // function MongoDBAdapter
 export const nextauthOptions: NextAuthOptions = {
-  adapter: MongoDBAdapter(clientPromise, {
-    collections: {
-      Users: 'users',
-      Accounts: 'accounts',
-      Sessions: 'sessions',
-      VerificationTokens: 'verification_tokens',
-    },
-    databaseName: 'hackday',
-  }) as Adapter,
+  // adapter: MongoDBAdapter(clientPromise, {
+  //   collections: {
+  //     Users: 'users',
+  //     Accounts: 'accounts',
+  //     Sessions: 'sessions',
+  //     VerificationTokens: 'verification_tokens',
+  //   },
+  //   databaseName: 'hackday',
+  // }) as Adapter, 
+  secret: process.env.NEXTAUTH_SECRET,
 
   providers: [
     GithubProvider({
@@ -91,17 +92,32 @@ callbacks: {
 
             return await signInWithProvider({ account, profile });
         }
+
         return true;
     },
-    async redirect({url, baseUrl}) {
-        if (url==="/"){
-            return `${baseUrl}/`
+    
+    async jwt({ token, trigger, session }) {
+      console.log("jwt", token)
+      if (trigger === "update") {
+        token.name = session.name
+      } else {
+        if (token.email) {
+          const user = await getUserByEmail({email: token.email})
+          // console.log({user})
+          token.name = user.name
+          token._id = user._id
+          token.role = user.role
+          token.provider = user.provider
+
         }
-        return '/team'
+      }
+      console.log("toke", token)
+      return token
     },
    
  
-    async session({ session, token }) {
+    async session({ session }) {
+      console.log("session", session)
       if (session.user?.email) {
        
           const userInfo = await getUserByEmail({email: session.user?.email});

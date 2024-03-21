@@ -5,8 +5,6 @@ import { iceland } from "./ui/fonts";
 import UserInterface from "@/lib/utils/interfaces/userInterface";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { set } from "mongoose";
-import { get } from "http";
 
 type Member = UserInterface;
 interface TeamProps {
@@ -89,7 +87,7 @@ export default function Team({ team }: Team) {
             return (
               <div className="flex flex-row gap-x-5  " key={index}>
                 <img
-                //@ts-ignore
+                  //@ts-ignore
                   src={member.image}
                   alt="image"
                   className="w-10 h-10 rounded-full object-cover"

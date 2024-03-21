@@ -63,7 +63,7 @@ export default function Navbar() {
               </div>
             </button>
 
-            {/* <Link
+            <Link
               href="/team"
               className="cursor-pointer rounded-md w-[150px] hover:bg-zinc-400 pt-[7px] pb-[7px] pr-11 pl-14 bg-aliceblue rounded-8xs flex flex-row items-center justify-center border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 "
             >
@@ -71,8 +71,8 @@ export default function Navbar() {
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]  ">
                 TEAMS
               </div>
-            </Link> */}
-            {/* <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
+            </Link>
+            <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
                 {session ? (
@@ -91,7 +91,7 @@ export default function Navbar() {
                   </a>
                 )}
               </div>
-            </button> */}
+            </button>
           </div>
         </div>
       </div>
