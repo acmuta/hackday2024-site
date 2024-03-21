@@ -15,8 +15,8 @@ export default function Home() {
 
         <TracingBeam className="max-w-4xl md:max-w-7xl pb-24">
           <Homepage></Homepage>
-          {/* <FAQ></FAQ>
-          <Venue></Venue> */}
+          {/* <FAQ></FAQ> */}
+          {/* <Venue></Venue> */}
         </TracingBeam>
 
         {/* <Footer></Footer> */}
