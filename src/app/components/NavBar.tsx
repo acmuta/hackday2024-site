@@ -48,14 +48,14 @@ export default function Navbar() {
                 APPLY
               </div>
             </Link>
-            {/* <LinkScroll to="faqSection" smooth={true} duration={500}> */}
+            <Link href="#faqSection">
             <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[62px] pl-[65px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
                 FAQ
               </div>
             </button>
-            {/* </LinkScroll> */}
+            </Link>
             <button className="cursor-pointer rounded-md w-[150px] items-center justify-center hover:bg-zinc-400 pt-[7px] pb-[7px] pr-[27px] pl-[34px] bg-aliceblue rounded-8xs flex flex-row border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:bg-opacity-40 hover:scale-105 transition ease-in-out duration-100 ">
               <div className="h-[37px] relative rounded-8xs bg-aliceblue box-border hidden border-[1px] border-solid border-white" />
               <div className="relative text-xl leading-[24px] font-iceland text-white text-left z-[1]">
