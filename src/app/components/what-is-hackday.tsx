@@ -80,9 +80,10 @@ const hackDayData = [
 
 export default function FAQ() {
   const handleScrollClick = () => {
-    const faqContainer = document.getElementById("faqContainer");
-    if (faqContainer) {
-      faqContainer.scrollTop = faqContainer.scrollHeight;
+    const faqContainer = document.getElementById("customScroll") || null;
+    console.log(faqContainer);
+    if (faqContainer != null) {
+      faqContainer.scrollBy(0, 100);
     }
   };
   return (
@@ -117,7 +118,10 @@ export default function FAQ() {
           >
             FAQs
           </h3>
-          <div className="customScroll scroll-mx-96 faqContainer h-[450px] overflow-y-auto scroll-smooth  self-stretch  flex flex-col items-center justify-start gap-[31px_0px] mq450:gap-[31px_0px] ">
+          <div
+            id="customScroll"
+            className="customScroll scroll-mx-96 faqContainer h-[450px] overflow-y-auto scroll-smooth  self-stretch  flex flex-col items-center justify-start gap-[31px_0px] mq450:gap-[31px_0px] "
+          >
             {hackDayData.map((data, index) => {
               return (
                 <>
