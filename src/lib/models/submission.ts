@@ -3,9 +3,10 @@ interface ISubmission extends Document {
     category: string;
     teamName: string;
     url:string;
-    score:number;
+    score:Array<number>;
     reviewCount: number;
     }
+
 const submissionSchema = new Schema<ISubmission>({
     category: {
         type: String,
@@ -19,10 +20,7 @@ const submissionSchema = new Schema<ISubmission>({
         type: String,
         default: "None"
     },
-    score: {
-        type: Number,
-        default: 0
-    },
+    score: [Number],
     reviewCount: {
         type: Number,
         default: 0

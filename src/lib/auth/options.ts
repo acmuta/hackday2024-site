@@ -97,7 +97,7 @@ callbacks: {
     },
     
     async jwt({ token, trigger, session }) {
-      console.log("jwt", token)
+
       if (trigger === "update") {
         token.name = session.name
       } else {
@@ -111,13 +111,13 @@ callbacks: {
 
         }
       }
-      console.log("toke", token)
+
       return token
     },
    
  
     async session({ session }) {
-      console.log("session", session)
+
       if (session.user?.email) {
        
           const userInfo = await getUserByEmail({email: session.user?.email});
