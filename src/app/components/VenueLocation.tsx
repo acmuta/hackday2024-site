@@ -17,9 +17,20 @@ export default function Venue() {
         <div className=" rounded-lg bg-[#EBF5FF1A]  bg-aliceblue box-border max-[640px]:gap-[5px_0px] gap-[20px_0px] flex flex-col items-center justify-center max-w-full border-[1px] border-solid border-white max-[640px]:p-5 p-10 w-full ">
           <div className="  rounded-3xs flex flex-row items-center justify-start bg-cover bg-no-repeat bg-[top] z-[1] ">
             <iframe
-              src="https://www.google.com/maps/d/embed?mid=17d4SqZ5DRYsMwP1y5kkszrcxU3zc2-k&ehbc=2E312F"
+              src="https://www.google.com/maps/d/embed?mid=1VJ-nNE1Lh8NjEzRZW1jNkflhKEeiEQ0&ehbc=2E312F"
               className="max-[640px]:w-full max-[640px]:h-[450px] h-[640px] w-[1024px] rounded-lg"
             />
+          </div>
+          <div>
+            <div>
+              <p className="text-2xl font-mono text-slate-300">
+                Building of Social work and Smart Hospital (SWSH)
+              </p>
+            </div>
+            <div className="flex flex-row justify-center gap-2">
+              <img width={"28px"} src="/location.svg" />
+              <p className="text-2xl font-mono font-bold ">Room no. 104 & 105</p>
+            </div>
           </div>
           <div className="flex flex-row max-[640px]:flex-col relative max-[640px]:top-[10px] max-[640px]:gap-2  gap-5">
             <a
