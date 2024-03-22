@@ -123,11 +123,7 @@ export default function FAQ() {
             className="customScroll scroll-mx-96 faqContainer h-[450px] overflow-y-auto scroll-smooth  self-stretch  flex flex-col items-center justify-start gap-[31px_0px] mq450:gap-[31px_0px] "
           >
             {hackDayData.map((data, index) => {
-              return (
-                <>
-                  <FAQ_Question data={data} key={index} />
-                </>
-              );
+              return <FAQ_Question data={data} key={index} />;
             })}
           </div>
           <img
