@@ -9,9 +9,9 @@ export async function POST(request: Request){
     await connectDB();
     const body = await request.json();
     const {name, user} = body;
-    const userfromDb = await UserProfile.findOne({email: user.email});
-    user.team = userfromDb.team
-    console.log(name, user)
+     const userfromDb = await UserProfile.findOne({email: user.email});
+     user.team = userfromDb.team
+
     if (user.team === "None"){
         user.team = name
         const getTeam = await Team.findOne({name: name});

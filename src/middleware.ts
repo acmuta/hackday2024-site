@@ -10,8 +10,8 @@ export default withAuth(
     // console.log(req.nextUrl)
     const { token } = req.nextauth
     const { pathname, origin } = req.nextUrl
-
-    if (pathname.startsWith("/judge") && token?.role !== "judge") {
+// change role to judge to protect route
+    if (pathname.startsWith("/judge") && token?.role !== "user") {
       return NextResponse.redirect(`${origin}/unauthorized`)
     }
   },

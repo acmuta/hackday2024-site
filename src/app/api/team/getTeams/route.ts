@@ -6,7 +6,6 @@ import { NextResponse } from 'next/server';
 export async function GET(request: Request){
     try{
     await connectDB();
-    console.log("get teams")
 
     const teamList = await Team.find({})
 
