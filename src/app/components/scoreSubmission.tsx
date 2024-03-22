@@ -10,7 +10,10 @@ interface ScoreSubmissionProps {
   revieweCount: number;
 }
 
-export default function ScoreSubmission({ submission }: any) {
+export default function ScoreSubmission(
+  { submission }: any,
+  { order }: number | undefined
+) {
   const [score, setScore] = useState("");
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -47,11 +50,13 @@ export default function ScoreSubmission({ submission }: any) {
   };
   return (
     <div className="flex flex-row p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-      <div className="flex-grow">
-        <h1 className={`${iceland.className} text-white md: text-3xl text-md`}>
-          1.
+      <div className="flex-grow ">
+        <h1
+          className={`${iceland.className} text-white md: text-3xl text-md md:max-w-[600px] max-w-[480px]`}
+        >
+          {order}
           <span
-            className={`${iceland.className} text-white md:text-xl text-sm`}
+            className={`${iceland.className} text-white md:text-xl text-sm break-all `}
           >
             <a href={submission.url} target="_blank">
               {submission.url}

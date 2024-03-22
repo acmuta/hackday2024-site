@@ -85,7 +85,10 @@ export default function JudgePage() {
               <p>No submissions</p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
@@ -142,7 +145,10 @@ export default function JudgePage() {
               <p>No submissions</p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
@@ -199,7 +205,10 @@ export default function JudgePage() {
               <p>No submissions</p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
@@ -256,7 +265,10 @@ export default function JudgePage() {
               <p>No submissions</p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
