@@ -1,5 +1,5 @@
 "use client";
-import Navbar from "@/components/NavBar";
+import Navbar from "@/components/navigation/NavBar";
 import Homepage from "@/components/Hero";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import FAQ from "@/components/what-is-hackday";
@@ -8,7 +8,6 @@ import Venue from "@/components/VenueLocation";
 export default function Home() {
   return (
     <main className="">
-      <div className="h-full">
         <Navbar />
 
         <TracingBeam className="max-w-4xl md:max-w-7xl pb-24">
@@ -21,7 +20,6 @@ export default function Home() {
         </TracingBeam>
 
         {/* <Footer /> */}
-      </div>
     </main>
   );
 }
