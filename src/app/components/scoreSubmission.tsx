@@ -10,15 +10,18 @@ interface ScoreSubmissionProps {
   revieweCount: number;
 }
 
-export default function ScoreSubmission(
-  { submission }: any,
-  { order }: number | undefined
-) {
+export default function ScoreSubmission({ submission }: any) {
   const [score, setScore] = useState("");
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (isNaN(Number(score))) {
       alert("Score must be a number");
+      setScore("");
+      return;
+    }
+    if (Number(score) > 100) {
+      alert("Score must be less than 100");
+      setScore("");
       return;
     }
     const data = {
@@ -54,7 +57,6 @@ export default function ScoreSubmission(
         <h1
           className={`${iceland.className} text-white md: text-3xl text-md md:max-w-[600px] max-w-[480px]`}
         >
-          {order}
           <span
             className={`${iceland.className} text-white md:text-xl text-sm break-all `}
           >

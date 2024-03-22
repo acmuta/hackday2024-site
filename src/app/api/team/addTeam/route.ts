@@ -9,8 +9,8 @@ export async function POST(request: Request){
     await connectDB();
     const body = await request.json();
     const {name, user} = body;
-     const userfromDb = await UserProfile.findOne({email: user.email});
-     user.team = userfromDb.team
+    //  const userfromDb = await UserProfile.findOne({email: user.email});
+    //  user.team = userfromDb.team
 
     if (user.team === "None"){
         user.team = name
@@ -19,7 +19,7 @@ export async function POST(request: Request){
 
             return new NextResponse("Team already exists", {status: 400})
         }
-        await UserProfile.updateOne({email: user.email}, {team: name})
+        // await UserProfile.updateOne({email: user.email}, {team: name})
         
         const team = await Team.create({
             name: name,
