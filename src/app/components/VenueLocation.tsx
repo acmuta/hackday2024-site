@@ -1,4 +1,3 @@
-
 import { iceland } from "./ui/fonts";
 
 export default function Venue() {
@@ -21,29 +20,40 @@ export default function Venue() {
               className="max-[640px]:w-full max-[640px]:h-[450px] h-[640px] w-[1024px] rounded-lg"
             />
           </div>
+          <div className="flex flex-row gap-2">
+            <div className="flex justify-center flex-col items-center">
+              <p className="text-xl text-slate-300 font-bold font-mono text-center">
+                Building of Social Work and <br /> Smart Hospital (SWSH)
+              </p>
+              <div className="flex flex-row gap-2">
+                <img
+                  src={"/location.svg"}
+                  color="white"
+                  height={"28px"}
+                  width={"28px"}
+                />
+                <p className="text-xl font-bold font-mono">
+                  Room no. 104 & 105
+                </p>
+              </div>
+            </div>
+          </div>
           <div className="flex flex-row max-[640px]:flex-col relative max-[640px]:top-[10px] max-[640px]:gap-2  gap-5">
             <a
               className="font-mono font-extrabold lg:text-[20px] px-5 py-3 bg-slate-700 rounded-lg text-center"
               target="_blank"
-              href="https://www.google.com/maps/place/32%C2%B043'41.5%22N+97%C2%B006'39.0%22W/@32.7281042,-97.1108277,19.98z/data=!4m4!3m3!8m2!3d32.7281944!4d-97.1108333?entry=ttu"
+              href="https://www.google.com/maps/place/School+of+Social+Work+and+Smart+Hospital+(SWSH)/@32.7274013,-97.1116936,19.91z/data=!4m12!1m5!3m4!2zMzLCsDQzJzQxLjUiTiA5N8KwMDYnMzkuMCJX!8m2!3d32.7281944!4d-97.1108333!3m5!1s0x864e7d733472202d:0x48ce4f3f6b59840c!8m2!3d32.7273039!4d-97.1113082!16s%2Fg%2F1hdztzc3s?entry=ttu"
             >
               Google Maps
             </a>
             <a
               className=" font-mono font-extrabold lg:text-[20px] px-5 py-3 p-5 bg-slate-700  rounded-lg text-center"
               target="_blank"
-              href="https://maps.apple.com/place?ll=32.728052,-97.110779&q=Dropped%20Pin&t=m"
+              href="https://maps.apple.com/?address=501%20W%20Mitchell%20St%0AArlington,%20TX%20%2076019%0AUnited%20States&auid=15965471530354566328&ll=32.727529,-97.111612&lsp=9902&q=School%20of%20Social%20Work&t=m"
             >
               Apple Maps
             </a>
-            <a
-              className=" font-mono font-extrabold lg:text-[20px] px-5 py-3 p-5 bg-slate-700 rounded-lg text-center"
-
-              target="_blank"
-              href="https://www.hackuta.org/images/hackuta2023map.png"
-            >
-              PDF Map
-            </a>
+          
           </div>
         </div>
       </div>
