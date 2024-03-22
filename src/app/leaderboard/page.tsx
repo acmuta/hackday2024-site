@@ -1,7 +1,7 @@
 "use client";
 import { set } from "mongoose";
-import Navbar from "../components/AfterLoginNavBar";
-import { iceland } from "../components/ui/fonts";
+import Navbar from "@/components/AfterLoginNavBar";
+import { iceland } from "@/components/ui/fonts";
 import { useEffect, useState } from "react";
 interface Rankteam {
   teamName: string;
