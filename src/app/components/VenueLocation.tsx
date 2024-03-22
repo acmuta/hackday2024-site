@@ -21,9 +21,9 @@ export default function Venue() {
               className="max-[640px]:w-full max-[640px]:h-[450px] h-[640px] w-[1024px] rounded-lg"
             />
           </div>
-          <div>
+          <div >
             <div>
-              <p className="text-2xl font-mono text-slate-300">
+              <p className="text-2xl font-mono text-slate-300 ">
                 Building of Social work and Smart Hospital (SWSH)
               </p>
             </div>

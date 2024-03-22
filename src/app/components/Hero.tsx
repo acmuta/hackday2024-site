@@ -32,12 +32,13 @@ export default function Homepage() {
                 APPLY
               </div>
             </Link>
-
-            <button className="cursor-pointer rounded-md p-5 hover:bg-white hover:text-black hover:scale-105 hover:bg-opacity-100  transition ease-in-out duration-200 text-white  bg-aliceblue md:w-[270px] w-[120px] rounded-3xs box-border overflow-hidden shrink-0 flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100">
-              <div className="relative text-29xl leading-[38px] font-icelandtext-left">
-                Learn More
-              </div>
-            </button>
+            <Link href={"#venueSection"}>
+              <button className="cursor-pointer rounded-md p-5 hover:bg-white hover:text-black hover:scale-105 hover:bg-opacity-100  transition ease-in-out duration-200 text-white  bg-aliceblue md:w-[270px] w-[120px] rounded-3xs box-border overflow-hidden shrink-0 flex flex-row items-center justify-center whitespace-nowrap border-[1px] border-solid border-white hover:bg-gainsboro-200 hover:box-border hover:border-[1px] hover:border-solid hover:border-gainsboro-100">
+                <div className="relative text-29xl leading-[38px] font-icelandtext-left">
+                  Learn More
+                </div>
+              </button>
+            </Link>
           </div>
           <div className="flex justify-center mt-6">
             <a
