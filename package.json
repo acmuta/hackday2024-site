@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^2.5.0",
+    "@radix-ui/react-dialog": "^1.0.5",
     "@types/react-scroll": "^1.8.10",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",
+    "lucide-react": "^0.363.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.2",
     "next": "14.1.0",
@@ -20,7 +23,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-scroll": "^1.9.0",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
