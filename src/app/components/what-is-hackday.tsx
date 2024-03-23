@@ -54,7 +54,7 @@ const hackDayData = [
   {
     question: "Where is the venue?",
     answer:
-      "Our main venue this year is UTA's brand-new Social Work and Smart Hospital (SWSH) building, rooms 104/105. The event will take place March 22, 2024! Exact schedule coming soon.",
+      "Our main venue this year is UTA's brand-new Social Work and Smart Hospital (SWSH) building, rooms 104/105. The event will take place March 23, 2024! Exact schedule coming soon.",
   },
   {
     question: "Are there any rules?",
