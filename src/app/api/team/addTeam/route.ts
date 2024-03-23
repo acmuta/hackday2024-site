@@ -19,7 +19,7 @@ export async function POST(request: Request){
 
             return new NextResponse("Team already exists", {status: 400})
         }
-        await UserProfile.updateOne({email: user.email}, {team: name})
+         await UserProfile.updateOne({email: user.email}, {team: name})
         
         const team = await Team.create({
             name: name,

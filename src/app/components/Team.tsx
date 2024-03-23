@@ -76,9 +76,9 @@ export default function Team({ team }: Team) {
   return (
     //@ts-ignore
     team.members.length ? (
-      <div className="flex flex-col w-60 h-80 border-solid border-white border-2 bg-white bg-opacity-20 justify-center items-center rounded-md  hover:bg-opacity-25 transition ease-in-out duration-100 shadow-md ">
+      <div className=" flex flex-col w-60 h-80 border-solid border-white border-2 bg-white bg-opacity-20 justify-center items-center rounded-md  hover:bg-opacity-25 transition ease-in-out duration-100 shadow-md ">
         <h1
-          className={`${iceland.className}  text-white break-all truncate text-3xl w-56 h-8 text-center`}
+          className={`${iceland.className}  text-white break-all truncate text-3xl w-56 h-8 text-center `}
         >
           {team.name}
         </h1>

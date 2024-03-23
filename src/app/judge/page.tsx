@@ -80,12 +80,17 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
@@ -137,12 +142,17 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
@@ -194,12 +204,17 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>
@@ -251,12 +266,17 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
-                <ScoreSubmission submission={submission}></ScoreSubmission>
+                <ScoreSubmission
+                  submission={submission}
+                  order={index}
+                ></ScoreSubmission>
               ))
             )}
           </div>

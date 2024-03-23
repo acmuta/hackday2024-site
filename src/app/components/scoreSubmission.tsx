@@ -16,6 +16,12 @@ export default function ScoreSubmission({ submission }: any) {
     e.preventDefault();
     if (isNaN(Number(score))) {
       alert("Score must be a number");
+      setScore("");
+      return;
+    }
+    if (Number(score) > 100) {
+      alert("Score must be less than 100");
+      setScore("");
       return;
     }
     const data = {
@@ -47,11 +53,12 @@ export default function ScoreSubmission({ submission }: any) {
   };
   return (
     <div className="flex flex-row p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-      <div className="flex-grow">
-        <h1 className={`${iceland.className} text-white md: text-3xl text-md`}>
-          1.
+      <div className="flex-grow ">
+        <h1
+          className={`${iceland.className} text-white md: text-3xl text-md md:max-w-[600px] max-w-[480px]`}
+        >
           <span
-            className={`${iceland.className} text-white md:text-xl text-sm`}
+            className={`${iceland.className} text-white md:text-xl text-sm break-all `}
           >
             <a href={submission.url} target="_blank">
               {submission.url}
