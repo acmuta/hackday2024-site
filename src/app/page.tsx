@@ -4,6 +4,7 @@ import Homepage from "@/components/Hero";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import FAQ from "@/components/what-is-hackday";
 import Venue from "@/components/VenueLocation";
+import OrganizingTeam from "@/components/OrganizingTeam";
 
 export default function Home() {
   return (
@@ -15,8 +16,10 @@ export default function Home() {
           <div id="faqSection">
             <FAQ />
           </div>
-
-          <Venue />
+          <div id="venueSection">
+            <Venue></Venue>
+          </div>
+          <OrganizingTeam/>
         </TracingBeam>
 
         {/* <Footer /> */}

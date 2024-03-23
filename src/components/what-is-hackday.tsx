@@ -37,11 +37,6 @@ const hackDayData = [
       "We encourage everyone to come, regardless of skill level. There is no experience required and there are many opportunities to learn and grow.",
   },
   {
-    question: "Where do I park?",
-    answer:
-      "Park in lot F10 which will be marked in blue on the HackUTA Event Parking Map on the day of event.",
-  },
-  {
     question: "How much does attending cost?",
     answer:
       "HackDay 2024 will be completely free to hackers! We will be providing meals for free.",
@@ -54,7 +49,7 @@ const hackDayData = [
   {
     question: "Where is the venue?",
     answer:
-      "Our main venue this year is UTA's brand-new Social Work and Smart Hospital (SWSH) building, rooms 104/105. The event will take place March 22, 2024! Exact schedule coming soon.",
+      "Our main venue this year is UTA's brand-new Social Work and Smart Hospital (SWSH) building, rooms 104/105. The event will take place March 23, 2024! Exact schedule coming soon.",
   },
   {
     question: "Are there any rules?",
@@ -80,9 +75,10 @@ const hackDayData = [
 
 export default function FAQ() {
   const handleScrollClick = () => {
-    const faqContainer = document.getElementById("faqContainer");
-    if (faqContainer) {
-      faqContainer.scrollTop = faqContainer.scrollHeight;
+    const faqContainer = document.getElementById("customScroll") || null;
+    console.log(faqContainer);
+    if (faqContainer != null) {
+      faqContainer.scrollBy(0, 100);
     }
   };
   return (
@@ -117,13 +113,12 @@ export default function FAQ() {
           >
             FAQs
           </h3>
-          <div className="customScroll scroll-mx-96 faqContainer h-[450px] overflow-y-auto scroll-smooth  self-stretch  flex flex-col items-center justify-start gap-[31px_0px] mq450:gap-[31px_0px] ">
+          <div
+            id="customScroll"
+            className="customScroll scroll-mx-96 faqContainer h-[450px] overflow-y-auto scroll-smooth  self-stretch  flex flex-col items-center justify-start gap-[31px_0px] mq450:gap-[31px_0px] "
+          >
             {hackDayData.map((data, index) => {
-              return (
-                <>
-                  <FAQ_Question data={data} key={index} />
-                </>
-              );
+              return <FAQ_Question data={data} key={index} />;
             })}
           </div>
           <img
