@@ -1,5 +1,5 @@
-import { iceland } from "../components/ui/fonts";
-import NavBar from "../components/AfterLoginNavBar";
+import { iceland } from "@/components/ui/fonts";
+import NavBar from "@/components/AfterLoginNavBar";
 export default function UnauthorizedPage() {
     return (
         <div>

@@ -1,8 +1,8 @@
 "use client";
-import NavBar from "../components/AfterLoginNavBar";
+import NavBar from "@/components/AfterLoginNavBar";
 import { useState } from "react";
-import { iceland } from "../components/ui/fonts";
-import ScoreSubmission from "../components/scoreSubmission";
+import { iceland } from "@/components/ui/fonts";
+import ScoreSubmission from "@/components/scoreSubmission";
 
 export default function JudgePage() {
   const [activeAccordion, setActiveAccordion] = useState(0);

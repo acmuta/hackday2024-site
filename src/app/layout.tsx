@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { roboto } from "./components/ui/fonts";
+import { roboto } from "@/components/ui/fonts";
 import "./globals.css";
 import SessionWrapper from "@/lib/utils/SessionWrapper";
+import { cn } from "@/lib/utils/cn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +28,8 @@ export default function RootLayout({
             backgroundAttachment: "fixed",
             height: "100vh",
           }}
-          className={`${roboto.className} `}
+          className={cn(roboto.className, inter.className, "bg-[#0D1117] overflow-x-hidden")}
         >
-          {/* <div className="fixed z-0">
-          <img className="" src={'/bg.png'} alt=""></img>
-        </div> */}
           {children}
         </body>
       </html>

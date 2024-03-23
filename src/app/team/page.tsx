@@ -1,8 +1,8 @@
 "use client";
-import TeamNavBar from "../components/AfterLoginNavBar";
-import Team from "../components/Team";
-import { iceland } from "../components/ui/fonts";
-import Spinner from "../components/Spinner";
+import TeamNavBar from "@/components/AfterLoginNavBar";
+import Team from "@/components/Team";
+import { iceland } from "@/components/ui/fonts";
+import Spinner from "@/components/Spinner";
 import { useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import UserInterface from "@/lib/utils/interfaces/userInterface";
