@@ -80,9 +80,11 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
                 <ScoreSubmission
@@ -140,9 +142,11 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
                 <ScoreSubmission
@@ -200,9 +204,11 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
                 <ScoreSubmission
@@ -260,9 +266,11 @@ export default function JudgePage() {
             aria-labelledby="accordion-collapse-heading-1"
           >
             {loading ? (
-              <p>Loading...</p>
+              <p className={`${iceland.className}  text-white `}>Loading...</p>
             ) : submissions.length === 0 ? (
-              <p>No submissions</p>
+              <p className={`${iceland.className}  text-white `}>
+                No submissions
+              </p>
             ) : (
               submissions.map((submission, index) => (
                 <ScoreSubmission
