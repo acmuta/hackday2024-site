@@ -16,7 +16,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }: any) => {
   'use client'
   return (
-    <div className="flex flex-row md:space-x-20 space-x-10">
+    <div className="flex flex-row space-x-10">
       <DateTimeDisplay value={days} type={'Days'} />
       <DateTimeDisplay value={hours} type={'Hours'} />
       <DateTimeDisplay value={minutes} type={'Minutes'} />

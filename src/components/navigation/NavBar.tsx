@@ -3,10 +3,15 @@ import Image from "next/image";
 import { iceland } from "../ui/fonts";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
-import router from "next/router";
 import NavItem from "./NavItem";
-
-// import { Link as LinkScroll } from "react-scroll";
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from "../ui/sheet";
 
 export default function Navbar() {
 	const { data: session } = useSession();
@@ -27,7 +32,7 @@ export default function Navbar() {
 				</div>
 			</Link>
 			<div
-				className={`flex md:flex-row flex-col ${iceland.className} items-start justify-start py-0 px-0 box-border md:gap-5 gap-2 max-w-full z-10`}
+				className={`hidden md:flex flex-row ${iceland.className} items-start justify-start py-0 px-0 box-border md:gap-5 gap-2 max-w-full z-10`}
 			>
 				<NavItem title="APPLY" href="/form" />
 				<NavItem title="DASHBOARD" href="/leaderboard" />
@@ -35,10 +40,49 @@ export default function Navbar() {
 				<NavItem title="SCHEDULE" href="/schedule" />
 
 				{session ? (
-					<NavItem title="SIGN OUT" href="/api/auth/signout" border/>
+					<NavItem title="SIGN OUT" href="" onClick={handleSignOut} border />
 				) : (
-					<NavItem title="SIGN IN" href="/api/auth/siagnin" border/>
+					<NavItem title="SIGN IN" href="" onClick={handleSignIn} border />
 				)}
+			</div>
+			<div className="md:hidden flex">
+				<Sheet>
+					<SheetTrigger>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							height="32px"
+							version="1.1"
+							viewBox="0 0 32 32"
+							width="32px"
+						>
+							<path
+								fill={"#fff"}
+								d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"
+							/>
+						</svg>
+					</SheetTrigger>
+					<SheetContent>
+						<SheetHeader>
+							<SheetTitle className="text-3xl font-bold text-start">HackDay 2024</SheetTitle>
+							<SheetDescription>
+								<div className="h-full w-full flex flex-col items-start justify-center text-2xl px-8 py-2">
+									<Link href=""></Link>
+
+									<Link href="/form">APPLY</Link>
+									<Link href="/leaderboard">DASHBOARD</Link>
+									<Link href="/faq">FAQ</Link>
+									<Link href="/schedule">SCHEDULE</Link>
+
+									{session ? (
+										<Link href="" onClick={handleSignOut}>SIGN OUT</Link>
+									) : (
+										<Link href="" onClick={handleSignIn}>SIGN IN</Link>
+									)}
+								</div>
+							</SheetDescription>
+						</SheetHeader>
+					</SheetContent>
+				</Sheet>
 			</div>
 		</div>
 	);
