@@ -37,11 +37,6 @@ const hackDayData = [
       "We encourage everyone to come, regardless of skill level. There is no experience required and there are many opportunities to learn and grow.",
   },
   {
-    question: "Where do I park?",
-    answer:
-      "Park in lot F10 which will be marked in blue on the HackUTA Event Parking Map on the day of event.",
-  },
-  {
     question: "How much does attending cost?",
     answer:
       "HackDay 2024 will be completely free to hackers! We will be providing meals for free.",
