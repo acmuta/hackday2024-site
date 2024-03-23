@@ -7,6 +7,7 @@ import FAQ from "./components/what-is-hackday";
 import Venue from "./components/VenueLocation";
 import Team from "./components/frame-component";
 import Footer from "./components/Footer";
+import OrganizingTeam from "./components/OrganizingTeam";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <div id="venueSection">
             <Venue></Venue>
           </div>
+          <OrganizingTeam/>
         </TracingBeam>
 
         {/* <Footer></Footer> */}
