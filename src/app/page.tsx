@@ -17,7 +17,7 @@ export default function Home() {
             <FAQ />
           </div>
           <div id="venueSection">
-            <Venue></Venue>
+            <Venue/>
           </div>
           <OrganizingTeam/>
         </TracingBeam>

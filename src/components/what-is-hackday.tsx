@@ -17,11 +17,6 @@ const FAQ_Question = ({ data }: { data: any }) => {
 };
 const hackDayData = [
   {
-    question: "What is HackDay?",
-    answer:
-      "In addition to the opportunity to submit a project for judging, we offer free food and fun events.",
-  },
-  {
     question: "What are the requirements for admittance?",
     answer:
       "You must be a UTA student. If you are still in high school or below, we will not be able to accept you.",
@@ -84,7 +79,7 @@ export default function FAQ() {
   return (
     <div className="max-[640px]:justify-center max-[640px]:items-center  max-[640px]:flex-col flex flex-row w-full items-start justify-start pt-0 px-5 pb-[248px] box-border gap-[0px_157px] max-w-full text-left text-57xl text-white font-iceland lg:flex-wrap lg:gap-[0px_157px] mq750:gap-[0px_157px] mq1050:pb-[161px] mq1050:box-border mq450:gap-[0px_157px] mq450:pb-[105px] mq450:box-border ">
       <div className="flex flex-row items-center justify-start gap-[0px_36px] lg:flex-1 ">
-        <div className="flex flex-col items-start justify-start gap-[27px_0px] top-[120px] relative">
+        <div className="flex flex-col items-start justify-start gap-[27px_0px] top-[90px] relative">
           <h3
             className={`${iceland.className} max-[640px]:text-[38px] text-[76px] m-0 relative text-inherit leading-[73px] font-normal font-inherit inline-block`}
           >
@@ -94,8 +89,9 @@ export default function FAQ() {
             className={` max-[640px]:text-[18px] text-[36px] h-[432px] relative text-17xl leading-[48px] whitespace-pre-wrap inline-block max-w-full font-regular-14 mq1050:text-10xl mq1050:leading-[38px] mq450:text-3xl mq450:leading-[29px]`}
           >
             <span>
-              In addition to the opportunity to submit a project for judging, we
-              offer free food and fun events.
+              Hackday is a fun mini-Hackathon that will be held for 8 hours.
+              Submit projects under your categories of choosing and stay for the
+              free food and mini-events!
             </span>
             {/* <span className="font-extralight">{` `}</span>
             <span>{`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus `}</span>

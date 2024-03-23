@@ -49,21 +49,6 @@
   }
 }
 
-<<<<<<< HEAD
-* {
-  scroll-behavior:smooth;
-  border-color: rgb(var(--border));
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-=======
 @layer base {
   * {
     @apply border-border dark;
@@ -71,7 +56,6 @@ body {
   body {
     @apply bg-background text-foreground;
   }
->>>>>>> ab80948b93c4eeaa42e250c67d61405d0a962128
 }
 
 .neonText {
